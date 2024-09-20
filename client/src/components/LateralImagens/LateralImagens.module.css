@@ -1,0 +1,9 @@
+.lateral{
+    display: inline-block;
+    width: 20%;
+}
+
+.lateral div{
+    padding: 0 80px;
+    padding-bottom: 4px;
+}

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import AbreviaData from "./AbreviaData";
-import AbreviaUc from "./AbreviaUc";
 import AbreviaInstrutor from "./AbreviaInstrutor";
-import AbreviaUC from "./AbreviaUc";
+import AbreviaUC from "./AbreviaUC"
+import styles from "./TabelaAulas.module.css";
+
 
 
 function TabelaAulas() {
@@ -33,8 +34,8 @@ function TabelaAulas() {
         }
     }
     return (
-        <div>
-            <table>
+        <div className={styles.aulas}>
+            <table className={styles.tabelaAulas}>
                 <thead>
                     <tr>
                         <th>Início</th>
@@ -52,7 +53,7 @@ function TabelaAulas() {
                             <td><AbreviaData data={aula.data_hora_fim} /></td>
                             <td>{aula.turma}</td>
                             <td><AbreviaInstrutor nome={aula.instrutor} /></td>
-                            <td><AbreviaUC Uc={aula.unidade_curricular} /></td>
+                            <td><AbreviaUC nome={aula.unidade_curricular} /></td>
                             <td>{aula.ambiente}</td>
                         </tr>
                     ))}
